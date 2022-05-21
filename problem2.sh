@@ -6,3 +6,15 @@ INPUT_FILE=./problem_fruits
 ## https://qiita.com/r18j21/items/70018b98509309a0d2c5
 
 ## APPENDIX. 余裕があったらINPUT_FILEが存在しない場合に「該当ファイルがありません」という制御を追加してみてください。
+
+if [ ! -e $INPUT_FILE ]; then
+	echo "該当ファイルがありません"
+	exit 
+fi	
+
+# ファイルの書き出し
+while read tmpLine
+do
+	echo ${tmpLine}
+
+done < $INPUT_FILE

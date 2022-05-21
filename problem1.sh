@@ -19,3 +19,18 @@ fi
 
 ## ここから
 echo "$1"
+
+# 一番シンプルなの
+num=$1
+if (($num % 15 == 0)); then
+	echo fizz buzz
+elif (($num % 3 == 0)); then
+	echo fizz
+elif (($num % 5 == 0)); then
+	echo buzz
+else
+	echo $num
+fi
+
+
+
